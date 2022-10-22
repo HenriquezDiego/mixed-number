@@ -11,14 +11,28 @@
             _fraction = fraction;
         }
 
-        public int Number()
+        private int Number()
         {
             return _number;
         }
 
-        public Fraction Fraction()
+        private Fraction Fraction()
         {
             return _fraction;
+        }
+
+        public Fraction ConvertToFraction(MixedFraction mixedFraction)
+        {
+            var d = mixedFraction.Fraction().Denominator();
+            var n = mixedFraction.Fraction().Numerator();
+            return new Fraction(mixedFraction.Number() * d + n, d);
+        }
+
+        public MixedFraction ConvertToMixedFraction(Fraction fraction)
+        {
+            var quotient = fraction.Numerator() / fraction.Denominator();
+            var remainder = fraction.Denominator() % fraction.Numerator();
+            return new MixedFraction(quotient, new Fraction(remainder, fraction.Denominator()));
         }
     }
 }
