@@ -21,14 +21,14 @@
             return _fraction;
         }
 
-        public Fraction ConvertToFraction(MixedFraction mixedFraction)
+        public static Fraction ConvertToFraction(MixedFraction mixedFraction)
         {
             var d = mixedFraction.Fraction().Denominator();
             var n = mixedFraction.Fraction().Numerator();
             return new Fraction(mixedFraction.Number() * d + n, d);
         }
 
-        public MixedFraction ConvertToMixedFraction(Fraction fraction)
+        public static MixedFraction ConvertToMixedFraction(Fraction fraction)
         {
             var quotient = fraction.Numerator() / fraction.Denominator();
             var remainder = fraction.Denominator() % fraction.Numerator();

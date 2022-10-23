@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B98EBE73-DFD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms", "src\algorithms\Algorithms.csproj", "{A567FBEA-82DA-4A54-A607-5428E3948C79}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{45A3E3D8-9123-40CF-9B51-6449B97626D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationUnitTests", "tests\ApplicationUnitTests\ApplicationUnitTests.csproj", "{226A9A10-12E5-4A73-8A10-B8CC7D555838}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +21,17 @@ Global
 		{A567FBEA-82DA-4A54-A607-5428E3948C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A567FBEA-82DA-4A54-A607-5428E3948C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A567FBEA-82DA-4A54-A607-5428E3948C79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{226A9A10-12E5-4A73-8A10-B8CC7D555838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{226A9A10-12E5-4A73-8A10-B8CC7D555838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{226A9A10-12E5-4A73-8A10-B8CC7D555838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{226A9A10-12E5-4A73-8A10-B8CC7D555838}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A567FBEA-82DA-4A54-A607-5428E3948C79} = {B98EBE73-DFDB-4BF3-B308-57640AD7A88E}
+		{226A9A10-12E5-4A73-8A10-B8CC7D555838} = {45A3E3D8-9123-40CF-9B51-6449B97626D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E4FA01C4-5ED4-42FC-A25B-200A6A0DBA9E}

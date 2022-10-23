@@ -51,6 +51,6 @@
             return new Fraction(a._numerator * b._denominator, a._denominator * b._numerator);
         }
 
-        public override string ToString() => $"{_numerator} / {_denominator}";
+        public override string ToString() => $"{_numerator}/{_denominator}";
     }
 }
