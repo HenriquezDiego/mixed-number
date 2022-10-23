@@ -21,11 +21,11 @@
             return _fraction;
         }
 
-        public static Fraction ConvertToFraction(MixedFraction mixedFraction)
+        public Fraction ConvertToFraction()
         {
-            var d = mixedFraction.Fraction().Denominator();
-            var n = mixedFraction.Fraction().Numerator();
-            return new Fraction(mixedFraction.Number() * d + n, d);
+            var d = Fraction().Denominator();
+            var n = Fraction().Numerator();
+            return new Fraction(Number() * d + n, d);
         }
 
         public static MixedFraction ConvertToMixedFraction(Fraction fraction)

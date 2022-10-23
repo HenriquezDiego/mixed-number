@@ -51,6 +51,24 @@
             return new Fraction(a._numerator * b._denominator, a._denominator * b._numerator);
         }
 
+        public MixedFraction ConvertToMixedFraction()
+        {
+            var quotient = Numerator() / Denominator();
+            var remainder = Denominator() % Numerator();
+            return new MixedFraction(quotient, new Fraction(remainder, Denominator()));
+        }
+        public Fraction Simplify()
+        {
+            var gcd = 2;
+            var result = this;
+            while (gcd > 1)
+            {
+                gcd = Euclides.GetGcdBySubtraction(result.Numerator(), result.Denominator());
+                result = new Fraction(result.Numerator() / gcd, result.Denominator() / gcd);
+            }
+            return result;
+        }
+
         public override string ToString() => $"{_numerator}/{_denominator}";
     }
 }
