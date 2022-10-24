@@ -1,5 +1,3 @@
-﻿using Microsoft.VisualBasic.CompilerServices;
-
 ﻿namespace Algorithms
 {
     public class Fraction

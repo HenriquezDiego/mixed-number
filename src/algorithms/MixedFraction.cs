@@ -28,11 +28,20 @@
             return new Fraction(Number() * d + n, d);
         }
 
-        public static MixedFraction ConvertToMixedFraction(Fraction fraction)
+        public MixedFraction ConvertToMixedFraction(Fraction fraction)
         {
             var quotient = fraction.Numerator() / fraction.Denominator();
             var remainder = fraction.Denominator() % fraction.Numerator();
             return new MixedFraction(quotient, new Fraction(remainder, fraction.Denominator()));
+        }
+
+        public MixedFraction Addition(MixedFraction value)
+        {
+            var f1 = ConvertToFraction();
+            var f2 = value.ConvertToFraction();
+            var f3 = f1 + f2;
+            f3 = f3.Simplify();
+            return f3.ConvertToMixedFraction();
         }
 
         public override string ToString()
