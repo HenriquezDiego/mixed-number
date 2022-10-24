@@ -54,7 +54,7 @@
         public MixedFraction ConvertToMixedFraction()
         {
             var quotient = Numerator() / Denominator();
-            var remainder = Denominator() % Numerator();
+            var remainder = Numerator() % Denominator();
             return new MixedFraction(quotient, new Fraction(remainder, Denominator()));
         }
         public Fraction Simplify()

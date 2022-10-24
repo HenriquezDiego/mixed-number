@@ -34,5 +34,10 @@
             var remainder = fraction.Denominator() % fraction.Numerator();
             return new MixedFraction(quotient, new Fraction(remainder, fraction.Denominator()));
         }
+
+        public override string ToString()
+        {
+            return $"{Number()} {Fraction().Numerator()}/{Fraction().Denominator()}";
+        }
     }
 }
