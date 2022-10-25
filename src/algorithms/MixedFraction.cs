@@ -44,6 +44,35 @@
             return f3.ConvertToMixedFraction();
         }
 
+        public MixedFraction Sub(MixedFraction value)
+        {
+            var f1 = ConvertToFraction();
+            var f2 = value.ConvertToFraction();
+            var f3 = f1 - f2;
+            f3 = f3.Simplify();
+            return f3.ConvertToMixedFraction();
+        }
+
+        public MixedFraction Mul(MixedFraction value)
+        {
+            var f1 = ConvertToFraction();
+            var f2 = value.ConvertToFraction();
+            var f3 = f1 * f2;
+            f3 = f3.Simplify();
+            return f3.ConvertToMixedFraction();
+        }
+
+        public MixedFraction Div(MixedFraction value)
+        {
+            var f1 = ConvertToFraction();
+            var f2 = value.ConvertToFraction();
+            var f3 = f1 / f2;
+            f3 = f3.Simplify();
+            return f3.ConvertToMixedFraction();
+        }
+
+
+
         public override string ToString()
         {
             return $"{Number()} {Fraction().Numerator()}/{Fraction().Denominator()}";
