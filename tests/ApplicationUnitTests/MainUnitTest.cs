@@ -30,5 +30,22 @@ public class MainUnitTest
         Assert.Equal("6 1/4", result.ToString());
     }
 
+    [Fact]
+    public void MixedFractionAdditionNegative()
+    {
+        var n1 = new MixedFraction(-8, 2, 5);
+        var result = n1.ConvertToFraction();
+        Assert.Equal("-42/5",result.ToString());
+    }
+
+    [Fact]
+    public void AddFractionAdditionNegative()
+    {
+        var f1 = new Fraction(3,4);
+        var f2 = new Fraction(1,3);
+        var result = f1 + (-f2);
+        Assert.Equal("5/12",result.ToString());
+    }
+
 
 }

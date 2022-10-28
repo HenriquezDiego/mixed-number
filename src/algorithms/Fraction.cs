@@ -37,7 +37,7 @@
             => new Fraction(a._numerator * b._denominator + b._numerator * a._denominator, a._denominator * b._denominator);
 
         public static Fraction operator -(Fraction a, Fraction b)
-            => a + (-b);
+            => a + -b;
 
         public static Fraction operator *(Fraction a, Fraction b)
             => new Fraction(a._numerator * b._numerator, a._denominator * b._denominator);

@@ -11,6 +11,12 @@
             _fraction = fraction;
         }
 
+        public MixedFraction(int number, int numerator, int denominator)
+        {
+            _number = number;
+            _fraction = new Fraction(numerator, denominator);
+        }
+
         private int Number()
         {
             return _number;
@@ -24,16 +30,11 @@
         public Fraction ConvertToFraction()
         {
             var d = Fraction().Denominator();
-            var n = Fraction().Numerator();
-            return new Fraction(Number() * d + n, d);
+            var n = Math.Abs(Number()) * d + Fraction().Numerator();
+            n = Number() < 0 ? -n : n;
+            return new Fraction(n, d);
         }
 
-        public MixedFraction ConvertToMixedFraction(Fraction fraction)
-        {
-            var quotient = fraction.Numerator() / fraction.Denominator();
-            var remainder = fraction.Denominator() % fraction.Numerator();
-            return new MixedFraction(quotient, new Fraction(remainder, fraction.Denominator()));
-        }
 
         public MixedFraction Addition(MixedFraction value)
         {
